@@ -3,8 +3,7 @@ kind: Component
 metadata:
   name: ${{values.component_id | dump}}
   {%- if values.description %}
-  description: ${{values.description | dump}}
-  {%- endif %}
+  description:
   annotations:
     github.com/project-slug: ${{values.destination.owner + "/" + values.destination.repo}}
     backstage.io/techdocs-ref: dir:.
